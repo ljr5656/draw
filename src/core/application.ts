@@ -85,12 +85,14 @@ export class Application implements EventListenerObject {
   public handleEvent(ev: Event): void {
     switch (ev.type) {
       case EEventType.MOUSE_DOWN:
+        this._isMouseDown = true;
         this.dispatchMouseDown(ev as MouseEvent);
         break;
       case EEventType.MOUSE_MOVE:
-        this.dispatchMouseMove(ev as MouseEvent);
+        this._isMouseDown && this.dispatchMouseMove(ev as MouseEvent);
         break;
       case EEventType.MOUSE_UP:
+        this._isMouseDown = false;
         this.dispatchMouseUp(ev as MouseEvent);
         break;
       case EEventType.KEYBOARD_DOWN:
