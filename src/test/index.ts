@@ -1,2 +1,4 @@
 // import './applicationTest';
-import './applicationEventTest';
+// import './applicationEventTest';
+// import './roughApplicationTest';
+import './canvasDragScaleTest';
