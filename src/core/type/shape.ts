@@ -15,9 +15,11 @@ export interface IShapeAttrs {
   width: number;
   height: number;
   // 颜色
-  fill?: string;
-  stroke?: string;
-  strokeWidth?: number;
+  fillStyle?: string;
+  strokeStyle?: string;
+  lineWidth?: number;
   // transform 相关
   rotation?: number;
 }
+
+export type IRectAttrs = IShapeAttrs;

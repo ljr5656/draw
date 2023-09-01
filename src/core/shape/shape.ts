@@ -10,9 +10,9 @@ export class Shape {
   width: number;
   height: number;
   // color
-  fill: string = '';
-  stroke: string = '';
-  strokeWidth?: number;
+  fillStyle: string = '';
+  strokeStyle: string = '';
+  lineWidth: number = 0;
   // transform
   rotation?: number;
 
@@ -32,9 +32,9 @@ export class Shape {
     this.width = options.width;
     this.height = options.height;
 
-    options.fill && (this.fill = options.fill);
-    options.stroke && (this.stroke = options.stroke);
-    options.strokeWidth && (this.strokeWidth = options.strokeWidth);
+    options.fillStyle && (this.fillStyle = options.fillStyle);
+    options.strokeStyle && (this.strokeStyle = options.strokeStyle);
+    options.lineWidth && (this.lineWidth = options.lineWidth);
 
     options.rotation && (this.rotation = options.rotation);
   }
@@ -48,9 +48,9 @@ export class Shape {
       y: this.y,
       width: this.width,
       height: this.height,
-      fill: this.fill,
-      stroke: this.stroke,
-      strokeWidth: this.strokeWidth,
+      fillStyle: this.fillStyle,
+      strokeStyle: this.strokeStyle,
+      lineWidth: this.lineWidth,
       rotation: this.rotation,
     };
   }
