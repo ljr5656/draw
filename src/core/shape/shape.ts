@@ -1,5 +1,5 @@
 import { EShapeType, IShapeAttrs } from '../type';
-import { genId, objectNameGenerator } from '../utils';
+import { genId, objectNameGenerator } from '../utils/common';
 
 export class Shape {
   type = EShapeType.Shape;
