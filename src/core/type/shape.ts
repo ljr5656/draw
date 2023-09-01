@@ -23,3 +23,4 @@ export interface IShapeAttrs {
 }
 
 export type IRectAttrs = IShapeAttrs;
+export type IEllipseAttrs = IShapeAttrs;
