@@ -63,4 +63,14 @@ export class Shape {
       self[key] = attrs[key];
     }
   }
+
+  // 获取包围盒
+  getBBoxWithoutRotation() {
+    return {
+      x: this.x,
+      y: this.y,
+      width: this.width,
+      height: this.height,
+    };
+  }
 }
